@@ -24,7 +24,7 @@
             "atomType": "Molecule",
             "name": "Bottoms",
             "x": 181,
-            "y": 156,
+            "y": 152,
             "uniqueID": 599813,
             "ioValues": [],
             "topLevel": false,
@@ -49,8 +49,8 @@
                 {
                     "atomType": "Extrude",
                     "name": "Extrude",
-                    "x": 391,
-                    "y": 107,
+                    "x": 420,
+                    "y": 93,
                     "uniqueID": 282376,
                     "ioValues": [
                         {
@@ -62,8 +62,8 @@
                 {
                     "atomType": "CutList",
                     "name": "Add To Cutlist",
-                    "x": 614,
-                    "y": 108,
+                    "x": 920,
+                    "y": 90,
                     "uniqueID": 225592,
                     "ioValues": []
                 },
@@ -102,12 +102,50 @@
         {
             "atomType": "Molecule",
             "name": "Sides",
-            "x": 176,
-            "y": 219,
+            "x": 175,
+            "y": 220,
             "uniqueID": 542779,
             "ioValues": [],
             "topLevel": false,
             "allAtoms": [
+                {
+                    "atomType": "Rectangle",
+                    "name": "Rectangle",
+                    "x": 221,
+                    "y": 174,
+                    "uniqueID": 645276,
+                    "ioValues": [
+                        {
+                            "name": "x length",
+                            "ioValue": 3
+                        },
+                        {
+                            "name": "y length",
+                            "ioValue": 310
+                        }
+                    ]
+                },
+                {
+                    "atomType": "Extrude",
+                    "name": "Extrude",
+                    "x": 471,
+                    "y": 143,
+                    "uniqueID": 989156,
+                    "ioValues": [
+                        {
+                            "name": "height",
+                            "ioValue": 200
+                        }
+                    ]
+                },
+                {
+                    "atomType": "CutList",
+                    "name": "Add To Cutlist",
+                    "x": 803,
+                    "y": 124,
+                    "uniqueID": 689760,
+                    "ioValues": []
+                },
                 {
                     "atomType": "Output",
                     "name": "Output",
@@ -116,7 +154,28 @@
                     "ioValues": []
                 }
             ],
-            "allConnectors": [],
+            "allConnectors": [
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 645276,
+                    "ap2ID": 989156
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": true,
+                    "ap1ID": 989156,
+                    "ap2ID": 689760
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "number or geometry",
+                    "ap2Primary": false,
+                    "ap1ID": 689760
+                }
+            ],
             "fileTypeVersion": 1
         },
         {
@@ -140,15 +199,15 @@
                     "atomType": "Molecule",
                     "name": "Bottoms",
                     "x": 181,
-                    "y": 156,
+                    "y": 152,
                     "uniqueID": 599813,
                     "ioValues": []
                 },
                 {
                     "atomType": "Molecule",
                     "name": "Sides",
-                    "x": 176,
-                    "y": 219,
+                    "x": 175,
+                    "y": 220,
                     "uniqueID": 542779,
                     "ioValues": []
                 },
@@ -162,9 +221,34 @@
                         {
                             "name": "3D shape 1",
                             "ioValue": 10
+                        },
+                        {
+                            "name": "3D shape 2",
+                            "ioValue": 10
                         }
                     ],
                     "removeCutawayGeometry": true
+                },
+                {
+                    "atomType": "CutLayout",
+                    "name": "Cut Layout",
+                    "x": 724,
+                    "y": 238,
+                    "uniqueID": 485918,
+                    "ioValues": [
+                        {
+                            "name": "Spacing",
+                            "ioValue": 5
+                        },
+                        {
+                            "name": "Sheet Width",
+                            "ioValue": 500
+                        },
+                        {
+                            "name": "Sheet Length",
+                            "ioValue": 50
+                        }
+                    ]
                 },
                 {
                     "atomType": "Output",
@@ -181,6 +265,20 @@
                     "ap2Primary": false,
                     "ap1ID": 599813,
                     "ap2ID": 157243
+                },
+                {
+                    "ap1Name": "Geometry",
+                    "ap2Name": "3D shape 2",
+                    "ap2Primary": false,
+                    "ap1ID": 542779,
+                    "ap2ID": 157243
+                },
+                {
+                    "ap1Name": "geometry",
+                    "ap2Name": "geometry",
+                    "ap2Primary": false,
+                    "ap1ID": 157243,
+                    "ap2ID": 485918
                 }
             ],
             "fileTypeVersion": 1
